@@ -1,0 +1,8 @@
+MicroServicesTest/.gauge
+MicroServicesTest/.idea
+MicroServicesTest/.settings
+MicroServicesTest/logs
+MicroServicesTest/reports
+MicroServicesTest/target
+MicroServicesTest/.project
+MicroServicesTest/.classpath
