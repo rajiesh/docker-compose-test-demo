@@ -25,7 +25,6 @@ downstream-service:
   links:
     - upstream-service:upstream-service
 
-
   command: ["./downstream-service/init.sh"]
 
   environment:

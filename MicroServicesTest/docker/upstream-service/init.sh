@@ -1,5 +1,18 @@
 #!/bin/bash
 
-yum install -y java-1.8.0-openjdk
+function use_jdk() {
+    if [ ! -f "${HOME}/.jabba/jabba.sh" ]; then
+      curl -sL https://github.com/shyiko/jabba/raw/master/install.sh | bash
+    fi
+    source "${HOME}/.jabba/jabba.sh"
+    jabba install "$1=$2"
+    jabba use "$1"
+}
+
+  use_jdk "openjdk@1.12.0" "tgz+https://download.java.net/java/GA/jdk12/GPL/openjdk-12_linux-x64_bin.tar.gz"
+
+
+echo "JAVA_HOME set to : $JAVA_HOME"
+
 java -jar /upstream-service/upstream-service.jar
 

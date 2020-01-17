@@ -24,6 +24,17 @@
             <version>2.5.1</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>4.1.2</version>
+        </dependency>
+        <dependency>
+            <groupId>com.mashape.unirest</groupId>
+            <artifactId>unirest-java</artifactId>
+            <version>1.4.9</version>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -50,7 +61,7 @@
                         </goals>
                         <configuration>
                             <composeFile>${project.basedir}/docker/docker-compose.yml</composeFile>
-                            <detachedMode>false</detachedMode>
+                            <detachedMode>true</detachedMode>
                         </configuration>
                     </execution>
                 </executions>
