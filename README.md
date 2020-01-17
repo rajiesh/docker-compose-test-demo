@@ -18,5 +18,5 @@ cd MicroServicesTest
 mvn verify
 ```
 
-The command will bring up 2 services `upstream-service` and `downstream-service` in 2 different docker containers which are linked. Maven test phase will execute the spec file defined at `MicroServicesTest/specs/example.spec`. Gauge test report can be viewed at `MicroServicesTest/reports/html-report/index.html`
+The command will bring up 2 services `upstream-service` and `downstream-service` in 2 different docker containers which are linked. Maven test phase will execute the spec file defined at `MicroServicesTest/specs`. Gauge test report can be viewed at `MicroServicesTest/reports/html-report/index.html`
 
