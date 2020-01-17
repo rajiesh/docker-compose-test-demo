@@ -14,7 +14,7 @@ This is a simple project to demonstrate how to startup multiple microservices us
 Run:
 
 ```
-cd MicroservicesTest
+cd MicroServicesTest
 mvn verify
 ```
 
