@@ -1,37 +1,40 @@
-# upstream-service container
-upstream-service:
-  image: centos:7
+version: "3"
 
-  container_name: "upstream-service"
+services:
+  # upstream-service container
+  upstream-service:
+    image: centos:7
 
-  command: ["./upstream-service/init.sh"]
+    container_name: "upstream-service"
 
-  environment:
-    - FOO=bar
+    command: ["./upstream-service/init.sh"]
 
-  volumes:
-    - ./upstream-service:/upstream-service
+    environment:
+      - FOO=bar
 
-  ports:
-    - "9090:9090"
+    volumes:
+      - ./upstream-service:/upstream-service
+
+    ports:
+      - "9090:9090"
 
 
-# Downstream service
-downstream-service:
-  image: centos:7
+  # Downstream service
+  downstream-service:
+    image: centos:7
 
-  container_name: "downstream-service"
+    container_name: "downstream-service"
 
-  links:
-    - upstream-service:upstream-service
+    links:
+      - upstream-service:upstream-service
 
-  command: ["./downstream-service/init.sh"]
+    command: ["./downstream-service/init.sh"]
 
-  environment:
-    - FOO=bar
+    environment:
+      - FOO=bar
 
-  volumes:
-    - ./downstream-service:/downstream-service
+    volumes:
+      - ./downstream-service:/downstream-service
 
-  ports:
-    - "8080:8080"
+    ports:
+      - "8080:8080"

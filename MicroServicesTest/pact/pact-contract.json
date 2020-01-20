@@ -1,0 +1,35 @@
+{
+    "provider": {
+        "name": "UpstreamService"
+    },
+    "consumer": {
+        "name": "ConsumerService"
+    },
+    "interactions": [
+        {
+            "description": "a request for json data",
+            "request": {
+                "method": "GET",
+                "path": "/api/get"
+            },
+            "response": {
+                "status": 200,
+                "headers": {
+                    "Content-Type": "application/json"
+                },
+                "body": {
+                    "modifiedKey1": "value1",
+                    "modifiedKey2": "value2"
+                }
+            }
+        }
+    ],
+    "metadata": {
+        "pact-specification": {
+            "version": "3.0.0"
+        },
+        "pact-jvm": {
+            "version": "3.5.14"
+        }
+    }
+}
