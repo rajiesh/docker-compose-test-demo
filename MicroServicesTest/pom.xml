@@ -60,7 +60,7 @@
                 <executions>
                     <execution>
                         <id>up</id>
-                        <phase>test</phase>
+                        <phase>initialize</phase>
                         <goals>
                             <goal>up</goal>
                         </goals>
@@ -94,7 +94,7 @@
                 <configuration>
                 <serviceProviders>
                     <serviceProvider>
-                    <name>UpstreamService</name>
+                    <name>DownstreamService</name>
                     <protocol>http</protocol>
                     <host>localhost</host>
                     <port>8080</port>

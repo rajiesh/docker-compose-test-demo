@@ -14,7 +14,7 @@ public class StepImplementation {
         while(true) {
             try {
                 System.out.println("This is before checking.....");
-                HttpURLConnection connection = (HttpURLConnection) new URL("http://localhost:8080/api/get").openConnection();
+                HttpURLConnection connection = (HttpURLConnection) new URL("http://localhost:8080/api/my_resource").openConnection();
                 connection.setRequestMethod("HEAD");
                 int responseCode = connection.getResponseCode();
                 if (responseCode == 200) {
@@ -32,7 +32,7 @@ public class StepImplementation {
     @Step("Request to upstream service is successful")
     public void verifyUpstreamAPI() throws InterruptedException {
         when().
-                get("http://localhost:8080/api/get").
+                get("http://localhost:8080/api/my_resource").
                 then().
                 statusCode(200).
                 body("modifiedKey1", equalTo("value1"),

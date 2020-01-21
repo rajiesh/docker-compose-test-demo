@@ -1,6 +1,6 @@
 {
     "provider": {
-        "name": "UpstreamService"
+        "name": "DownstreamService"
     },
     "consumer": {
         "name": "ConsumerService"
@@ -10,7 +10,7 @@
             "description": "a request for json data",
             "request": {
                 "method": "GET",
-                "path": "/api/get"
+                "path": "/api/my_resource"
             },
             "response": {
                 "status": 200,
